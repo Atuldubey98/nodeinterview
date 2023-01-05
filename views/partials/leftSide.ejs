@@ -1,0 +1,13 @@
+<div class="col leftSide bg-light" style="width: minmax(600px, 50%)">
+  <ul class="list-unstyled">
+    <% files.forEach(({name}, index) => { %>
+    <li
+      style="cursor: pointer"
+      onclick="selectSong('<%=name%>')"
+      class="m-1 p-2 card <%=index%2==0 ? 'bg-light': 'bg-secondary' %>"
+    >
+      <span><%= index+1 %> <%= `${name}` %> </span>
+    </li>
+    <% }) %>
+  </ul>
+</div>
